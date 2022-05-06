@@ -229,54 +229,54 @@ $pdf->AddPage();
         </table>
         <br>';
 
-        date_default_timezone_set("Asia/Singapore");
+        // date_default_timezone_set("Asia/Singapore");
 
-        $html .='
-            <br>
-            <table border=".2" style="width: 50%;">
-                <thead>
-                    <tr>
-                        <th style="width: 70%;"><h4>'; if($mp == 'Installment'){$html.='Installment';}else{$html.='Cash';} $html.='</h4></th>
-                        <th style="width: 30%;text-align: left;">OR#:</th>
-                    </tr>
-                </thead>
-                <tbody> ';
+        // $html .='
+        //     <br>
+        //     <table border=".2" style="width: 50%;">
+        //         <thead>
+        //             <tr>
+        //                 <th style="width: 70%;"><h4>'; if($mp == 'Installment'){$html.='Installment';}else{$html.='Cash';} $html.='</h4></th>
+        //                 <th style="width: 30%;text-align: left;">OR#:</th>
+        //             </tr>
+        //         </thead>
+        //         <tbody> ';
                     
-                    if($mp == 'Installment'){
-                        $html .= '<tr>
-                            <td style="width: 70%;">Down Payment</td>
-                            <td style="width: 30%;text-align: right;">'.number_format($dp, 2, ".", ",").'</td>
-                        </tr>';
-                        date_default_timezone_set("Asia/Singapore");
-                        $startdate=strtotime("August 1 2021");
-                        $enddate=strtotime("+4 months", $startdate);
-                        $i = 1;
-                        while ($startdate < $enddate) {
-                            $html .= '<tr>
-                                <td style="width: 70%;">'.date("M, d Y", $startdate).'</td>
-                                <td style="width: 30%;text-align: right;">'.number_format($monthly, 2, ".", ",").'</td>
-                            </tr>';
+        //             if($mp == 'Installment'){
+        //                 $html .= '<tr>
+        //                     <td style="width: 70%;">Down Payment</td>
+        //                     <td style="width: 30%;text-align: right;">'.number_format($dp, 2, ".", ",").'</td>
+        //                 </tr>';
+        //                 date_default_timezone_set("Asia/Singapore");
+        //                 $startdate=strtotime("August 1 2021");
+        //                 $enddate=strtotime("+4 months", $startdate);
+        //                 $i = 1;
+        //                 while ($startdate < $enddate) {
+        //                     $html .= '<tr>
+        //                         <td style="width: 70%;">'.date("M, d Y", $startdate).'</td>
+        //                         <td style="width: 30%;text-align: right;">'.number_format($monthly, 2, ".", ",").'</td>
+        //                     </tr>';
 
-                            $totalmonth = $monthly * 4;
-                        $startdate = strtotime("+1 months", $startdate);
-                        }
+        //                     $totalmonth = $monthly * 4;
+        //                 $startdate = strtotime("+1 months", $startdate);
+        //                 }
 
-                        $html .= '<tr>
-                                <td style="width: 70%;">Total</td>
-                                <td style="width: 30%;text-align: right;">'.number_format($totalmonth, 2, ".", ",").'</td>
-                            </tr>';
+        //                 $html .= '<tr>
+        //                         <td style="width: 70%;">Total</td>
+        //                         <td style="width: 30%;text-align: right;">'.number_format($totalmonth, 2, ".", ",").'</td>
+        //                     </tr>';
 
-                    }elseif($mp == 'Cash'){
-                        $html .= '<tr>
-                            <td style="width: 70%;">Cash</td>
-                            <td style="width: 30%;text-align: right;">'.number_format($dp, 2, ".", ",").'</td>
-                        </tr>';
-                    }
+        //             }elseif($mp == 'Cash'){
+        //                 $html .= '<tr>
+        //                     <td style="width: 70%;">Cash</td>
+        //                     <td style="width: 30%;text-align: right;">'.number_format($dp, 2, ".", ",").'</td>
+        //                 </tr>';
+        //             }
                   
 
-                $html .= ' </tbody>
-                </table>
-        ';
+        //         $html .= ' </tbody>
+        //         </table>
+        // ';
 
 
         $html .='

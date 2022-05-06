@@ -9,7 +9,7 @@
     });
 </script>
 
-<div class="main">
+<div class="container-fluid">
     <h1>General Averag Rankings</h1>
     <div class="container container-fluid">
     <br><br>

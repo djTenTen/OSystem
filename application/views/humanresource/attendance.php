@@ -1,4 +1,4 @@
-<div class="main">
+<div class="container-fluid">
 <h1>Employee Attendance</h1>
     
     <?= form_open('empattendance');?>

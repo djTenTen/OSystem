@@ -1,4 +1,4 @@
-<div class="main">
+<div class="container-fluid">
     <h1>Subjects & Schedule</h1><br>
     
 

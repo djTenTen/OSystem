@@ -1,4 +1,4 @@
-<div class="main">
+<div class="container-fluid">
 <h1>Visitors</h1>
     <?= form_open("exportvisitors");?>
         <div class="form-inline form-control-sm">

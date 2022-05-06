@@ -1,4 +1,4 @@
-<div class="main">
+<div class="container-fluid">
 <?php
         if($this->session->flashdata('Insuficient') != null){
             echo '<div class="alert alert-danger">

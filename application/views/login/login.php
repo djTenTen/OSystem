@@ -3,125 +3,87 @@
 <html lang="en">
 <head>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+   
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+
     <title>HCC DES - <?= $title?></title>
-    <!-- <link rel="stylesheet" href="css/styles.css"> -->
-    <script src="https://kit.fontawesome.com/2be74ad659.js" crossorigin="anonymous"></script>
+    <!-- Custom fonts for this template-->
+    <link href="<?= base_url();?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
+    <!-- Custom styles for this template-->
+    <link href="<?= base_url();?>css/sb-admin-2.min.css" rel="stylesheet">
 
-
-
-    <style>
-        .logo{
-            width: 150px;
-          }
-          
-          .sidenav {
-            height: 100%;
-            width: 200px;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            overflow-x: hidden;
-            padding-top: 20px;
-          }
-          
-          @media only screen and (min-device-width : 280px) and (max-device-width : 375px) {
-            .user_card {
-            margin-top: 120px;
-          }
-          }
-          @media only screen and (min-device-width : 376px) and (max-device-width : 768px) {
-            .user_card {
-            margin-top: 150px;
-          }
-          }
-
-          @media only screen and (min-device-width : 769px) and (max-device-width : 1024px) {
-            .user_card {
-            margin-top: 180px;
-          }
-
-          }
-          
-          .whitetxt{
-            color: white;
-          }
-          
-          
-          /* LOGIN */
-          .user_card {
-            height: 400px;
-            width: 350px;
-            margin-bottom: auto;
-            background-color: rgba(225,225,225, 0.8);
-            position: relative;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            padding: 10px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            border-radius: 5px;
-          
-          }
-          .brand_logo_container {
-            position: absolute;
-            height: 170px;
-            width: 170px;
-            top: -75px;
-            border-radius: 50%;
-            background: #ffffff;
-            padding: 10px;
-            text-align: center;
-          }
-          .brand_logo {
-            height: 150px;
-            width: 150px;
-            border-radius: 50%;
-            border: 2px solid white;
-          }
-          .form_container {
-            margin-top: 100px;
-          }
-          .login_btn {
-            width: 100%;
-            background: #115ae0 !important;
-            color: white !important;
-          }
-          .login_btn:focus {
-            box-shadow: none !important;
-            outline: 0px !important;
-          }
-          .login_container {
-            padding: 0 2rem;
-          }
-          .input-group-text {
-            background: #115ae0 !important;
-            color: white !important;
-            border: 0 !important;
-            border-radius: 0.25rem 0 0 0.25rem !important;
-          }
-          .input_user,
-          .input_pass:focus {
-            box-shadow: none !important;
-          }
-    </style>
 
 </head>
-<body style="background-image: url(image/bghcc.jpg); height: auto;
-width: auto;
-background-attachment: fixed;
-background-position: center;
-background-size: cover;
-overflow-x: hidden; 
-">
-    <div class="container-fluid">
+<body class="bg-gradient-primary">
+
+	<div class="container">
+		<!-- Outer Row -->
+		<div class="row justify-content-center">
+			<div class="col-xl-10 col-lg-12 col-md-9">
+				<div class="card o-hidden border-0 shadow-lg my-5">
+					<div class="card-body p-0">
+						<!-- Nested Row within Card Body -->
+						<div class="row">
+							<div class="col-lg-6 d-none d-lg-block bg-login-image">
+							
+							</div>
+							
+							<div class="col-lg-6">
+								<div class="p-5">
+									<div class="text-center">
+										<h1 class="h4 text-gray-900 mb-4">Welcome to One System!</h1>
+									</div>
+									<form class="user" action="authenticate" method="post">
+										<div class="form-group">
+											<input type="email" class="form-control form-control-user"
+												id="exampleInputEmail" aria-describedby="emailHelp"
+												placeholder="Enter Email Address..."  name="un" required>
+										</div>
+										<div class="form-group">
+											<input type="password" class="form-control form-control-user"
+												id="exampleInputPassword" placeholder="Password" name="pss" required>
+										</div>
+										
+										<button type="submit" class="btn btn-primary btn-user btn-block" >Login</button>
+								
+										<hr>
+										<!-- <a href="index.html" class="btn btn-google btn-user btn-block">
+											<i class="fab fa-google fa-fw"></i> Login with Google
+										</a>
+										<a href="index.html" class="btn btn-facebook btn-user btn-block">
+											<i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
+										</a> -->
+									</form>
+									<hr>
+									<div class="text-center">
+										<a class="small" href="forgot-password.html">Forgot Password?</a>
+									</div>
+									<div class="text-center">
+										<a class="small" href="selectdpt">Create an Account!</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+    <!-- <div class="container-fluid">
         <div class="d-flex justify-content-center" style="margin-top: 10%;">
             <div class="user_card">
                     
@@ -169,17 +131,17 @@ overflow-x: hidden;
             
         </div>
        
-    </div>
+    </div> -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="<?= base_url();?>vendor/jquery/jquery.min.js"></script>
+    <script src="<?= base_url();?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- Core plugin JavaScript-->
+    <script src="<?= base_url();?>vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="<?= base_url();?>js/sb-admin-2.min.js"></script>
     
 </body>
 </html>

@@ -1,4 +1,4 @@
-<div class="main">
+<div class="container-fluid">
 <h1>College Teachers</h1>
 
         <div class="input-group mb-3 mt-3">

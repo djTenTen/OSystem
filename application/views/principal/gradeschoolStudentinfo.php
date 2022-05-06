@@ -1,4 +1,4 @@
-<div class="main">
+<div class="container-fluid">
 
     <h1>List of Grade School Students</h1>
     <div class="container container-fluid">

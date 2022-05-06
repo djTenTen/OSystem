@@ -1,4 +1,4 @@
-<div class="main">
+<div class="container-fluid">
     <h1>Senior High Students</h1>
 
         <?= form_open('pod_seniorhigh');?>

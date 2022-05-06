@@ -9,8 +9,7 @@ $route['updateUser/(:any)'] = 'Users_controller/updateUser/$1';
 $route['deleteUser/(:any)'] = 'Users_controller/deleteUser/$1';
 $route['accountsetting/(:any)'] = 'Users_controller/getuserInfo/$1';
 $route['accountsettingsupdate/(:any)'] = 'Users_controller/accountsettingsupdate/$1';
-
-
+$route['selectdpt'] = 'Users_controller/selectdpt';
 
 
 

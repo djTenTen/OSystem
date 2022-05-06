@@ -118,6 +118,34 @@ class Users_controller extends CI_Controller{
         
 
     }
+
+    
+
+    public function selectdpt(){
+
+        $page = 'dpt';
+        if(!file_exists(APPPATH.'views/users/'.$page.'.php')){
+            show_404();
+        } else{
+            $data['title'] = "Select Department";
+            $this->load->view('users/'.$page, $data);
+        }
+        
+    }
+
+
+    public function signup(){
+
+        $page = 'signup';
+        if(!file_exists(APPPATH.'views/users/'.$page.'.php')){
+            show_404();
+        } else{
+            $data['title'] = "Sign-up";
+            $this->load->view('users/'.$page, $data);
+        
+        }
+        
+    }
     
 
 

@@ -1,5 +1,4 @@
-<div class="main">
-
+<div class="container-fluid">
     <?php
         if($this->session->flashdata('Subject_Removed') != null){
             echo '<div class="alert alert-success">

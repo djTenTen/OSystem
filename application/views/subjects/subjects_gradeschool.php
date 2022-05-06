@@ -1,4 +1,4 @@
-<div class="main">
+<div class="container-fluid">
     <?php
         if($this->session->flashdata('Gradeschool_Added') != null){
             echo '<div class="alert alert-success">

@@ -1,4 +1,4 @@
-<div class="main">
+<div class="container-fluid">
 
     <h1>Export list</h1>
     <div class="container row">

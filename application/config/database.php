@@ -98,10 +98,10 @@ $query_builder = TRUE;
 // Host:   gator4113.hostgator.com     cpanel.holycrosscollegepampanga.com
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'gator4113.hostgator.com',
-	'username' => 'holycros_admin',
-	'password' => '@@MasTERPass!!',
-	'database' => 'holycros_onesystem',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'osystem',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

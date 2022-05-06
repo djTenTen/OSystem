@@ -1,4 +1,4 @@
-<div class="main">
+<div class="container-fluid">
 <h1>Registrar Dashboard</h1>
 
 <div class="m-4">
