@@ -59,7 +59,7 @@
                     <button type="button" class="btn btn-primary">Evaluated : <?= $evaluatedcount;?></button>
                     <button type="button" class="btn btn-success">Enrolled : <?= $enrolledcount;?></button>
                 </div> 
-                    <table class="table table-bordered table-sm" id="datatable">
+                    <table class="table table-bordered table-hover table-sm" id="datatable">
                         <thead>
                             <tr>
                                 <th>Admission ID</th>

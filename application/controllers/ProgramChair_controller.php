@@ -36,7 +36,7 @@ class ProgramChair_controller extends CI_Controller{
                 show_404();
             }else{
                 
-                $data['title'] = "Student Evaluation";
+                $data['title'] = "Student Evaluation - College";
                 
                     $_SESSION['ID'] = $ID;
                     $data['studentinfo'] = $this->ProgChair_model->viewStudentInfo($ID);  

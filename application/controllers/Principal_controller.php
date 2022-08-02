@@ -35,7 +35,7 @@ class Principal_controller extends CI_Controller{
                 show_404();
             }else{
                 
-                $data['title'] = "Student Evaluation";
+                $data['title'] = "Student Evaluation - Senior High";
 
                 $_SESSION['ID'] = $ID;
                 $data['studentinfo'] = $this->Principal_model->viewStudentInfo($ID);  
@@ -286,7 +286,7 @@ class Principal_controller extends CI_Controller{
                 show_404();
             }else{
 
-                $data['title'] = "Student Evaluation - Senior High";
+                $data['title'] = "Student Evaluation - Junior High";
 
                 $data['validatedStudents'] = $this->Principal_model->viewvalidatedJuniorhigh();
                 $this->load->view('templates/header',$data);
@@ -311,7 +311,7 @@ class Principal_controller extends CI_Controller{
                 show_404();
             }else{
                 
-                $data['title'] = "Student Evaluation";
+                $data['title'] = "Student Evaluation - Junior High";
 
                 $_SESSION['ID'] = $ID;
                 $data['studentinfo'] = $this->Principal_model->viewStudentInfoJuniorhigh($ID);
@@ -590,7 +590,7 @@ class Principal_controller extends CI_Controller{
                 show_404();
             }else{
                 
-                $data['title'] = "Student Evaluation";
+                $data['title'] = "Student Evaluation - Grade School";
 
                 $_SESSION['ID'] = $ID;
                 $data['studentinfo'] = $this->Principal_model->viewStudentInfoGradeschool($ID);

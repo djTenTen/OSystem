@@ -20,7 +20,7 @@
         }
     ?>
 
-    <h1>Evaluation / Advising</h1>
+
     <div class="container container-fluid">
     
         <div class="row">
@@ -98,7 +98,13 @@
         <br>
         <h6>Total Subjects: <?= $subjectCount?></h6>
         <h6>Total Hours: <?= $hrsCount?></h6>
-        <div style="overflow-y:scroll;width:100%;height:550px">
+
+        <div class="container" style="margin-bottom: 5%;">
+            <?= form_open('savestudentSeniorhigh');?>
+                <button name="savestudent" type="submit" class="btn btn-success float-right btn-lg" id="savestudent" value="savestudent" ><span class="far fa-save"></span> Save</button>
+            <?= form_close();?>
+        </div>
+        <div class="container">
            
             <table class="table table-bordered table-hover table-sm" style="margin-top: 1%;">
                 <thead>

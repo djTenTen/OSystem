@@ -7,3 +7,14 @@ function viewpassword() {
       x.type = "password";
     }
 }
+
+
+
+
+
+
+$(document).ready(function () {
+$('select').selectize({
+  sortField: 'text'
+});
+});

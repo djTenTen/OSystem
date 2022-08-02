@@ -12,6 +12,26 @@
     <link href="<?= base_url();?>css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url();?>css/styles.css">
     <script src="<?= base_url();?>js/script.js"></script>
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="<?= base_url();?>vendor/jquery/jquery.min.js"></script>
+    <script src="<?= base_url();?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="<?= base_url();?>vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="<?= base_url();?>js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="<?= base_url();?>vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="<?= base_url();?>js/demo/chart-area-demo.js"></script>
+    <script src="<?= base_url();?>js/demo/chart-pie-demo.js"></script>
+
+
     <!-- Custom fonts for this template-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
@@ -20,14 +40,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
     <script src="https://kit.fontawesome.com/2be74ad659.js" crossorigin="anonymous"></script>
     <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
-    
-    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
-    
     
     <script>
         $(document).ready( function () {
@@ -35,7 +52,8 @@
         } );
     </script>
 
-    
+
+
     <title><?= $title;?></title>
 
 </head>
@@ -221,7 +239,7 @@
                     <a class="dropdown-item whitetxt" href="<?= base_url();?>pegradecollege">E-Grade</a>   -->
 
             <?php           
-                if($_SESSION['Dean'] == 'Yes'){?>
+                if($_SESSION['Dean'] == 'Yes' || $_SESSION['Progchair'] == 'Yes' || $_SESSION['Principal'] == 'Yes'){?>
                     <li class="nav-item">
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#advising"
                             aria-expanded="true" aria-controls="advising">
@@ -231,20 +249,9 @@
                         <div id="advising" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                             <div class="bg-white py-2 collapse-inner rounded">
                                 <ul class="navbar-nav">
-                                    <li class="nav-item dropdown dropright">
-                                        <a class="dropdown-item whitetxt dropdown-toggle" type="button" aria-expanded="true" aria-controls="registrar" data-target="#evaluation" data-toggle="collapse">Evaluation</a>
-                                        <div class="collapse" id="evaluation">
-                                            <ul class="navbar-nav pl-3">
-                                                <a class="dropdown-item whitetxt <?php if($_SESSION['Collegedpt'] == 'No'){echo "disabled";}?>" href="<?= base_url()?>collegeStudentinfo">College</a> 
-                                                <a class="dropdown-item whitetxt <?php if($_SESSION['SeniorHighdpt'] == 'No'){echo "disabled";}?>" href="<?= base_url();?>seniorhighStudentinfo">Senior High</a>
-                                                <a class="dropdown-item whitetxt <?php if($_SESSION['JuniorHighdpt'] == 'No'){echo "disabled";}?>" href="<?= base_url();?>juniorhighStudentinfo">Junior High</a>
-                                                <a class="dropdown-item whitetxt <?php if($_SESSION['GradeSchooldpt'] == 'No'){echo "disabled";}?>" href="<?= base_url();?>gradeschoolStudentinfo">Grade School</a>                   
-                                            </ul>
-                                        </div>
-                                    </li>
 
                                     <li class="nav-item dropdown dropright">
-                                        <a class="dropdown-item whitetxt dropdown-toggle" type="button" id="navbardrop" data-target="#status" data-toggle="collapse">Status</a>
+                                        <a class="dropdown-item whitetxt dropdown-toggle" type="button" id="navbardrop" data-target="#status" data-toggle="collapse">Evaluation</a>
                                         <div class="collapse" id="status">
                                             <ul class="navbar-nav pl-3">
                                                 <a class="dropdown-item whitetxt <?php if($_SESSION['Collegedpt'] == 'No'){echo "disabled";}?>" href="<?= base_url()?>evaluate_college">College</a> 
@@ -255,6 +262,18 @@
                                         </div>
                                     </li>
 
+                                    <li class="nav-item dropdown dropright">
+                                        <a class="dropdown-item whitetxt dropdown-toggle" type="button" aria-expanded="true" aria-controls="registrar" data-target="#evaluation" data-toggle="collapse">Status</a>
+                                        <div class="collapse" id="evaluation">
+                                            <ul class="navbar-nav pl-3">
+                                                <a class="dropdown-item whitetxt <?php if($_SESSION['Collegedpt'] == 'No'){echo "disabled";}?>" href="<?= base_url()?>collegeStudentinfo">College</a> 
+                                                <a class="dropdown-item whitetxt <?php if($_SESSION['SeniorHighdpt'] == 'No'){echo "disabled";}?>" href="<?= base_url();?>seniorhighStudentinfo">Senior High</a>
+                                                <a class="dropdown-item whitetxt <?php if($_SESSION['JuniorHighdpt'] == 'No'){echo "disabled";}?>" href="<?= base_url();?>juniorhighStudentinfo">Junior High</a>
+                                                <a class="dropdown-item whitetxt <?php if($_SESSION['GradeSchooldpt'] == 'No'){echo "disabled";}?>" href="<?= base_url();?>gradeschoolStudentinfo">Grade School</a>                   
+                                            </ul>
+                                        </div>
+                                    </li>
+                                   
                                     <li class="nav-item dropdown dropright">
                                         <a class="dropdown-item whitetxt dropdown-toggle" type="button" id="navbardrop" data-target="#sched" data-toggle="collapse">Schedule</a>
                                         <div class="collapse" id="sched">

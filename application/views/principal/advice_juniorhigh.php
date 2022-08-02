@@ -19,7 +19,7 @@
         }
     ?>
 
-    <h1>Evaluation / Advising</h1>
+
     <div class="container container-fluid">
     
         <div class="row">
@@ -67,28 +67,19 @@
                     <button type="submit" class="btn btn-primary btn-sm" id="addsubject" value="addsubject" name="addsubject"><span class="far fa-eye"> </span> View Subjects</button>
                 <?= form_close();?>
             </div>
-            
-            <div class="col-lg-7">
-                <?= form_open('addsubjectTempJuniorhigh');?>
-                    <div class="form-group">
-                        <label for="address">Add Subject: </label>
-                        <select id="select-state" name="subjects" class="form-control form-control-sm" required>
-                            <option value="" selected>Select Section</option>
-                            <?php foreach($juniorhighSubjects as $subjects){?>
-                                <option value="<?= $subjects['csubjectID'];?>"><?= $subjects['subjectCode'].'-'.$subjects['subjectDesc'].' ('.$subjects['Day'].'/'.$subjects['Time'].')-->'.$subjects['FullName'];?></option>
-                            <?php }?>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-sm" id="addsubject" value="addsubject" name="addsubject"><span class="fas fa-plus"></span> Add Subject</button>
-                <?= form_close();?>
-            </div>
+        
             
         </div>
         <!-- SHOWING OF SUBJECTS OF STUDENT -->
         <br>
         <h6>Total Subjects: <?= $subjectCount?></h6>
         <h6>Total Hours: <?= $hrsCount?></h6>
-        <div style="overflow-y:scroll;width:100%;height:550px">
+        <div class="container" style="margin-bottom: 5%;">
+            <?= form_open('savestudentJuniorhigh');?>
+                <button name="savestudent" type="submit" class="btn btn-success float-right btn-lg" id="savestudent" value="savestudent" ><span class="far fa-save"></span> Save</button>
+            <?= form_close();?>
+        </div>
+        <div class="container">
            
             <table class="table table-bordered table-hover table-sm" style="margin-top: 1%;">
                 <thead>
@@ -122,12 +113,6 @@
                 <?php }?>
                 </tbody>
             </table>
-        </div>
-
-        <div class="container" style="margin-bottom: 5%;">
-            <?= form_open('savestudentJuniorhigh');?>
-                <button name="savestudent" type="submit" class="btn btn-success float-right" id="savestudent" value="savestudent" ><span class="far fa-save"></span> Save</button>
-            <?= form_close();?>
         </div>
 
     </div>

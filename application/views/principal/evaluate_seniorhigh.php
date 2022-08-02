@@ -18,7 +18,7 @@
         </div>';
         }
     ?>
-    <h1>Evaluation / Advising - Seniorhigh</h1>
+
     <div class="container container-fluid"style="margin-top: 2%">
 
         <div class="input-group mb-3">
