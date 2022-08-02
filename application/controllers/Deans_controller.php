@@ -13,7 +13,7 @@ class Deans_controller extends CI_Controller{
             }else{
 
                 $data['classlist'] = $this->Deans_model->showClassList();
-                $data['title'] = "Class List"; 
+                $data['title'] = "Class List - College"; 
                 $this->load->view('templates/header',$data);
                 $this->load->view('progchair/'.$page, $data);
                 $this->load->view('templates/footer');

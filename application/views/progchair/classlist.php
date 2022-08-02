@@ -1,6 +1,5 @@
 <div class="container-fluid">
 
-    <h1>Class List</h1>
 
     <div class="container container-fluid">
     <br><br>
