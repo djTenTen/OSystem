@@ -28,8 +28,6 @@
     
     ?>
 
-    <h1>Admission - Senior High</h1>
-
     <div class="container">
         <div class="row">
             
@@ -459,9 +457,6 @@
                         </tbody>
                     </table>
             </div>
-            </div>
         </div>
     </div>
-
-    
 </div>
