@@ -11,7 +11,6 @@
 
 <div class="container-fluid">
 
-    <h1>List of Evaluated College Students</h1>
     <div class="container container-fluid">
     <br><br>
     

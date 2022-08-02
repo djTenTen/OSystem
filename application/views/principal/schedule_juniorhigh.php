@@ -1,6 +1,5 @@
 <div class="container-fluid">
 
-    <h1>Juniorhigh Schedule</h1>
     <div class="container container-fluid">
 
         <div class="input-group mb-3">

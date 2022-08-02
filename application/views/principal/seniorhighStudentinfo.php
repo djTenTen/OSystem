@@ -1,6 +1,5 @@
 <div class="container-fluid">
 
-    <h1>List of Senior High Students</h1>
     <div class="container container-fluid">
     <br><br>
     

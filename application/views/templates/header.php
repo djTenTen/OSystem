@@ -620,7 +620,7 @@
                 <!-- Topbar Search -->
                 <div class="row align-items-center">
                     <div class="container">
-                        <h1><?= strtoupper($title);?></h1>
+                        <h1><?= $title;?></h1>
                     </div>
                 </div>
                 
