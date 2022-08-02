@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h1>Subjects & Schedule</h1><br>
+    <h1><?= $FullName;?></h1><br>
     
 
     <table class="table table-borderless table-sm">
@@ -13,16 +13,14 @@
         </tr>
         <tr>
             <td>
-                <h6>Name: <strong><?= $FullName;?></strong></h6>
+                <h6>Course: <strong><?= $CourseDesc;?></strong></h6>
             </td>
             <td>
                 <h6>Level: <strong><?= $Level;?></strong></h6>
             </td>
         </tr>
         <tr>
-            <td>
-                <h6>Course: <strong><?= $CourseDesc;?></strong></h6>
-            </td>
+            
             <td>
                 <h6>Status: <strong><?php if($isEvaluated == 'Yes' && $isAssess == 'No' && $isEnrolled =='No'){
                     echo '<button type="button" class="btn btn-info">Pending for Assessment</button>';
@@ -50,7 +48,7 @@
                 <?php foreach($studentSubjects as $subjects){?>
                     <tr>
                         <td><?= $subjects['subjectCode']?></td>
-                        <td><?= $subjects['SubjectDesc']?></td>
+                        <td><?= $subjects['SubjectDesc'].' - ( '.$subjects['CourseCode'].' '. $subjects['Section'].')';?></td>
                         <td><?= $subjects['Day']?></td>
                         <td><?= $subjects['Time']?></td>
                         <td><?= $subjects['FullName']?></td>

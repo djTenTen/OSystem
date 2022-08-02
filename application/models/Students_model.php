@@ -29,13 +29,9 @@ class Students_model extends CI_Model{
 
 
     public function viewStudentSubjectsCollege($admissionID,$sy,$sem){
-        $query = $this->db->query("select student_subject_college.subjectID,subjectCode,SubjectDesc,lec,labComputer,labNonComputer,units,computeunits,Day,Time,FullName,Prelim,Midterm,Finals,Grade,Remarks,isReleasing,CourseCode,Section,Equivalent
-        from student_subject_college,subject_college,curriculum_subjectcollege,users,courses,curriculum_college
+        $query = $this->db->query("select student_subject_college.subjectID,subjectCode,SubjectDesc,FullName,Prelim,Midterm,Finals,Grade,Remarks,isReleasing,Equivalent
+        from student_subject_college,subject_college,users
         where student_subject_college.subjectID = subject_college.subjectID
-        and student_subject_college.curriculumID = curriculum_subjectcollege.curriculumID
-        and student_subject_college.subjectID = curriculum_subjectcollege.subjectID
-        and curriculum_college.courseID = courses.CourseID
-        and student_subject_college.curriculumID = curriculum_college.curriculumID
         and student_subject_college.Teacher = users.userID
         and student_subject_college.sy = '$sy'
         and student_subject_college.semester = '$sem'

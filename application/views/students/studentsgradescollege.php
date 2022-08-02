@@ -1,33 +1,6 @@
 <div class="container-fluid">
-    <h1>Subjects & Grades</h1><br>
+    <h1><?= $FullName;?></h1><br>
     
-
-    <table class="table table-borderless table-sm">
-        <tr>
-            <td>
-                <h6>Student Number: <strong><?= $StudentNo;?></strong></h6>
-            </td>
-            <td>
-                <h6>Section: <strong><?= $Section;?></strong></h6>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h6>Name: <strong><?= $FullName;?></strong></h6>
-            </td>
-            <td>
-                <h6>Level: <strong><?= $Level;?> / <?= $Semester;?></strong></h6>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h6>Course: <strong><?= $CourseDesc;?></strong></h6>
-            </td>
-            <td>
-    
-            </td>
-        </tr>
-    </table>
 
     <?= form_open('studentsgrades');?>
 
@@ -37,18 +10,16 @@
                 <label for="sy">School Year: </label>
                 <select name="sy" class="form-control form-control-sm" required>
                     <option value="">School Year</option>
-                    <?php foreach($viewSY as $sy){?>
-                        <option value="<?= $sy['sy'];?>"><?= $sy['sy'];?></option>
-                    <?php }?>
+                        <option value="2021-2022">2021-2022</option>
+                        <option value="2022-2023">2022-2023</option>
                 </select>
             </div>
             <div class="form-group m-1">
                 <label for="sy">Semester: </label>
                 <select name="sem" class="form-control form-control-sm" required>
                     <option value="">Semester</option>
-                    <?php foreach($viewSem as $sem){?>
-                        <option value="<?= $sem['semester'];?>"><?= $sem['semester'];?></option>
-                    <?php }?>
+                        <option value="1ST SEM">1ST SEM</option>
+                        <option value="2ND SEM">2ND SEM</option>
                 </select>
             </div>
 
@@ -58,7 +29,7 @@
     <?= form_close();?>
 
 
-    <div style=overflow-y:scroll;width:100%;height:auto>
+    <div class="container">
 
        
         <table class="table table-bordered table-hover table-sm">
@@ -86,7 +57,7 @@
                         elseif($subjects['Remarks'] == 'FAILED'){echo 'alert alert-danger';}
                         ?>">
                         <td><?= $subjects['subjectCode']?></td>
-                        <td><?= $subjects['SubjectDesc'].' - ( '.$subjects['CourseCode'].' '. $subjects['Section'].')';?> </td>
+                        <td><?= $subjects['SubjectDesc'];?> </td>
                         <td><?= $subjects['FullName']?></td>
                         <td><?= $subjects['Prelim']?></td>
                         <td><?= $subjects['Midterm']?></td>

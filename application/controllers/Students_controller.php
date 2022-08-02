@@ -87,7 +87,7 @@ class Students_controller extends CI_Controller{
 
                 if($_SESSION['Collegedpt'] == 'Yes'){
                     $fn = $_SESSION['FullName'];
-                    $data['title'] = "$fn";
+                    $data['title'] = "Subjects & Schedules";
                     
                     $data['studentSubjectsInfo'] = $this->Students_model->studentsInformation($fn);
                     $data['admissionID'] = $data['studentSubjectsInfo']['admissionID'];
@@ -112,7 +112,7 @@ class Students_controller extends CI_Controller{
                     $data['studentSubjects'] = $this->Registrar_model->viewStudentSubjects($data['admissionID']);
                 }elseif($_SESSION['SeniorHighdpt'] == 'Yes'){
                     $fn = $_SESSION['FullName'];
-                    $data['title'] = "$fn";
+                    $data['title'] = "Subjects & Schedules";
                     
                     $data['studentSubjectsInfo'] = $this->Students_model->studentsInformation($fn);
                     $data['admissionID'] = $data['studentSubjectsInfo']['admissionID'];
@@ -136,7 +136,7 @@ class Students_controller extends CI_Controller{
                 }elseif($_SESSION['JuniorHighdpt'] == 'Yes'){
 
                     $fn = $_SESSION['FullName'];
-                    $data['title'] = "$fn";
+                    $data['title'] = "Subjects & Schedules";
                     
                     $data['studentSubjectsInfo'] = $this->Students_model->studentsInformation($fn);
                     $data['admissionID'] = $data['studentSubjectsInfo']['admissionID'];
@@ -161,7 +161,7 @@ class Students_controller extends CI_Controller{
                 }elseif($_SESSION['GradeSchooldpt'] == 'Yes'){
 
                     $fn = $_SESSION['FullName'];
-                    $data['title'] = "$fn";
+                    $data['title'] = "Subjects & Schedules";
                     
                     $data['studentSubjectsInfo'] = $this->Students_model->studentsInformation($fn);
                     $data['admissionID'] = $data['studentSubjectsInfo']['admissionID'];
@@ -220,7 +220,7 @@ class Students_controller extends CI_Controller{
                 }else{
 
                     $fn = $_SESSION['FullName'];
-                    $data['title'] = "$fn";
+                    $data['title'] = "Subjects & Grades";
                     
                     $data['studentSubjectsInfo'] = $this->Students_model->studentsInformation($fn);
                     $data['admissionID'] = $data['studentSubjectsInfo']['admissionID'];
@@ -268,10 +268,6 @@ class Students_controller extends CI_Controller{
                         );
                     }
                     
-                    $data['viewSY'] = $this->Students_model->viewSYCollege();
-                    $data['viewSem'] = $this->Students_model->viewSemCollege();
-
-                    
 
 
                     $this->load->view('templates/header',$data);
@@ -286,7 +282,7 @@ class Students_controller extends CI_Controller{
                     show_404();
                 }else{
                     $fn = $_SESSION['FullName'];
-                    $data['title'] = "$fn";
+                    $data['title'] = "Subjects & Grades";
                     
                     $data['studentSubjectsInfo'] = $this->Students_model->studentsInformation($fn);
                     $data['admissionID'] = $data['studentSubjectsInfo']['admissionID'];
@@ -347,9 +343,6 @@ class Students_controller extends CI_Controller{
                         
                     }
 
-                    $data['viewSY'] = $this->Students_model->viewSYshs();
-                    $data['viewSem'] = $this->Students_model->viewSemshs();
-
 
                     $this->load->view('templates/header',$data);
                     $this->load->view('students/'.$page, $data);
@@ -363,7 +356,7 @@ class Students_controller extends CI_Controller{
                     show_404();
                 }else{
                     $fn = $_SESSION['FullName'];
-                    $data['title'] = "$fn";
+                    $data['title'] = "Subjects & Grades";
                     
                     $data['studentSubjectsInfo'] = $this->Students_model->studentsInformation($fn);
                     $data['admissionID'] = $data['studentSubjectsInfo']['admissionID'];
@@ -422,8 +415,6 @@ class Students_controller extends CI_Controller{
                         
                     }
 
-                    
-                    $data['viewSY'] = $this->Students_model->viewSYjhs();
 
                     $this->load->view('templates/header',$data);
                     $this->load->view('students/'.$page, $data);
@@ -438,7 +429,7 @@ class Students_controller extends CI_Controller{
                     show_404();
                 }else{
                     $fn = $_SESSION['FullName'];
-                    $data['title'] = "$fn";
+                    $data['title'] = "Subjects & Grades";
                     
                     $data['studentSubjectsInfo'] = $this->Students_model->studentsInformation($fn);
                     $data['admissionID'] = $data['studentSubjectsInfo']['admissionID'];
@@ -497,8 +488,6 @@ class Students_controller extends CI_Controller{
                         
                     }
 
-                    
-                    $data['viewSY'] = $this->Students_model->viewSYgs();
 
                     $this->load->view('templates/header',$data);
                     $this->load->view('students/'.$page, $data);
