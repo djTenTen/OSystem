@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://172.16.1.236/OSystem/';
+$config['base_url'] = 'http://172.16.1.170/OSystem/';
 // https://30a9-58-69-86-126.ngrok.io/
 // http://192.168.0.254/onesystem/
 //****https://hccschoolmanagementsystem.holycrosscollegepampanga.edu.ph/

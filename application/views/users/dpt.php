@@ -27,7 +27,7 @@
     <div class="container">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
-            <h1 class="m-4">Select Department</h1>
+            <h1 class="m-2">Select Department</h1>
             <div class="card-body p-0 row justify-content-center align-items-center">
                 <!-- Nested Row within Card Body -->
                 <div class="col-xl-3 col-md-6 mb-4 m-4" style="height: 250px;">
@@ -48,7 +48,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="" class="btn btn-success mt-5">Register</a>
+                            <a href="signupcollege" class="btn btn-success mt-5">Register</a>
                         </div>
                     </div>
                 </div>
@@ -67,13 +67,13 @@
                                         Grade 12</div>
                                 </div>
                             </div>
-                            <a href="" class="btn btn-success mt-5">Register</a>
+                            <a href="signupshs" class="btn btn-success mt-5">Register</a>
                         </div>
                         
                     </div>
                 </div>
-
-
+            </div>
+            <div class="card-body p-0 row justify-content-center align-items-center">
                 <div class="col-xl-3 col-md-6 mb-4 m-4" style="height: 250px;">
                     <div class="card border-left-warning shadow h-100 py-2">
                         <div class="card-body" style="background-image: url(img/jhs.png); 
@@ -92,7 +92,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="" class="btn btn-success mt-3">Register</a>
+                            <a href="signupjs" class="btn btn-success mt-3">Register</a>
                         </div>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="" class="btn btn-success mt-3">Register</a>
+                            <a href="signupgs" class="btn btn-success mt-3">Register</a>
                         </div>
                     </div>
                 </div>

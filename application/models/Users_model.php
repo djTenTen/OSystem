@@ -182,4 +182,9 @@ class Users_model extends CI_Model{
 
     }
 
+    public function getcourse(){
+        $query = $this->db->get('courses');
+        return $query->result_array();
+    }
+
 }

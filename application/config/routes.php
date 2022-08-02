@@ -10,6 +10,10 @@ $route['deleteUser/(:any)'] = 'Users_controller/deleteUser/$1';
 $route['accountsetting/(:any)'] = 'Users_controller/getuserInfo/$1';
 $route['accountsettingsupdate/(:any)'] = 'Users_controller/accountsettingsupdate/$1';
 $route['selectdpt'] = 'Users_controller/selectdpt';
+$route['signupcollege'] = 'Users_controller/signupcollege';
+$route['signupshs'] = 'Users_controller/signupshs';
+$route['signupjs'] = 'Users_controller/signupjs';
+$route['signupgs'] = 'Users_controller/signupgs';
 
 
 

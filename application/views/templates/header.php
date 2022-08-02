@@ -8,16 +8,27 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <link href="<?= base_url();?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="<?= base_url();?>css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?= base_url();?>css/styles.css">
+    <script src="<?= base_url();?>js/script.js"></script>
+    <!-- Custom fonts for this template-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script src="https://kit.fontawesome.com/2be74ad659.js" crossorigin="anonymous"></script>
+    <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+    
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
-    <!-- Custom fonts for this template-->
-    <link href="<?= base_url();?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-    <!-- Custom styles for this template-->
-    <link href="<?= base_url();?>css/sb-admin-2.min.css" rel="stylesheet">
-
+    
+    
     <script>
         $(document).ready( function () {
             $('#datatable').DataTable();
@@ -53,13 +64,17 @@
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-        <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-            <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
-            </div>
-            <div class="sidebar-brand-text mx-3"><?= $_SESSION['Position'];?> </div>
-        </a>
+        
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+            <a class="sidebar-brand align-items-center justify-content-center" href="<?= base_url();?>dashboard">
+                <div class="sidebar-brand-icon">
+                    <img src="<?= base_url();?>img/logo4.png" alt="Logo" class="logo">
+                    <p>Holy Cross College</p>
+                </div>
+            </a>
+        </li>
 
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
@@ -522,6 +537,17 @@
                                         </div>
                                     </li>
                                     <li class="nav-item dropdown dropright">
+                                        <a class="dropdown-item whitetxt dropdown-toggle" type="button" id="navbardrop" data-target="#class" data-toggle="collapse">Class</a>
+                                        <div class="collapse" id="class">
+                                            <ul class="navbar-nav pl-3">
+                                                <li class="nav-item"><a class="dropdown-item whitetxt" href="<?= base_url();?>curriculum_college">College</a></li>
+                                                <li class="nav-item"><a class="dropdown-item whitetxt" href="<?= base_url();?>curriculum_seniorhigh">Senior High</a></li>
+                                                <li class="nav-item"><a class="dropdown-item whitetxt" href="<?= base_url();?>curriculum_juniorhigh">Junior High</a></li>
+                                                <li class="nav-item"><a class="dropdown-item whitetxt" href="<?= base_url();?>curriculum_gradeschool">Grade School</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown dropright">
                                         <a class="dropdown-item whitetxt dropdown-toggle" type="button" id="navbardrop" data-target="#gwa" data-toggle="collapse">GWA</a>
                                         <div class="collapse" id="gwa">
                                             <ul class="navbar-nav pl-3">
@@ -573,8 +599,12 @@
                 </button>
 
                 <!-- Topbar Search -->
-                <h1>Holy Cross College Pampanga</h1>
-
+                <div class="row align-items-center">
+                    <div class="container">
+                        <h1><?= strtoupper($title);?></h1>
+                    </div>
+                </div>
+                
                 <!-- Topbar Navbar -->
                 <ul class="navbar-nav ml-auto">
 
@@ -642,7 +672,7 @@
                         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                         <div class="modal-footer">
                             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                            <a class="btn btn-primary" href="logout">Logout</a>
+                            <a class="btn btn-danger" href="logout">Logout</a>
                         </div>
                     </div>
                 </div>

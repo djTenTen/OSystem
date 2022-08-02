@@ -134,7 +134,49 @@ class Users_controller extends CI_Controller{
     }
 
 
-    public function signup(){
+    public function signupcollege(){
+
+        $page = 'signupcollege';
+        if(!file_exists(APPPATH.'views/users/'.$page.'.php')){
+            show_404();
+        } else{
+            $data['title'] = "Sign-up";
+
+            $data['course'] = $this->Users_model->getcourse();
+            $this->load->view('users/'.$page, $data);
+        
+        }
+        
+    }
+
+    public function signupshs(){
+
+        $page = 'signup';
+        if(!file_exists(APPPATH.'views/users/'.$page.'.php')){
+            show_404();
+        } else{
+            $data['title'] = "Sign-up";
+            $this->load->view('users/'.$page, $data);
+        
+        }
+        
+    }
+
+    public function signupjhs(){
+
+        $page = 'signup';
+        if(!file_exists(APPPATH.'views/users/'.$page.'.php')){
+            show_404();
+        } else{
+            $data['title'] = "Sign-up";
+            $this->load->view('users/'.$page, $data);
+        
+        }
+        
+    }
+
+
+    public function signupgs(){
 
         $page = 'signup';
         if(!file_exists(APPPATH.'views/users/'.$page.'.php')){

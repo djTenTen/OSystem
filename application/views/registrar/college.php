@@ -72,6 +72,8 @@
                         <td><?= $row['Level'];?></td>
                         <td><?= $row['Section'];?></td>
                         <td>
+                            <a class="btn btn-outline-<?php if($row['isAssess'] == 'Yes'){echo 'success';}else{echo 'primary';}?>" data-toggle="tooltip" title="Assess" href="<?= base_url().'assescollege/'.$row['admissionID']?>"><span class="fas fa-tasks"></a>
+                            <a type="button" data-toggle="modal" data-target="#myModalEdit<?= $row['admissionID'];?>"  class="btn btn-outline-info" data-toggle="tooltip" title="Edit"><span class="far fa-edit"></span></a>
                             <?php if($row['isValidated'] == 'No' or $row['isEvaluated'] == 'No'){?>
                                 <div class="btn-group btn-group-sm">
                                     <a type="button" data-toggle="modal" data-target="#printgrade<?= $row['admissionID'];?>"  class="btn btn-outline-primary" data-toggle="tooltip" title="Print Grade"><span class="fas fa-scroll"></span></a>
