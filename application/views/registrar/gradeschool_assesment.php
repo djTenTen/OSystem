@@ -20,7 +20,7 @@
         }
     
     ?>
-    <h1>Grade School Assesment</h1>
+    
     <div class="container">
 
         <div class="row">

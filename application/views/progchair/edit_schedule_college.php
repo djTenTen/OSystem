@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h1>Edit - College Schedule</h1>
+   
     <a href="<?= base_url();?>schedule_college" class="btn btn-primary btn-sm">Back</a>
     <div style="overflow-y:scroll;width:100%;height:550px">
         <table class="table table-bordered table-hover table-sm" style="margin-top: 1%;">

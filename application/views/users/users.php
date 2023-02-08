@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="main">
     <?php 
         if($this->session->flashdata('User_Added') != null){
             echo '<div class="alert alert-success">
@@ -17,6 +17,20 @@
             <strong>Success! </strong> User successfully deleted. 
         </div>';
         }
+
+        if($this->session->flashdata('Enabled') != null){
+            echo '<div class="alert alert-success">
+            <strong>Success! </strong> User has been Enabled. 
+        </div>';
+        }
+
+        if($this->session->flashdata('Disabled') != null){
+            echo '<div class="alert alert-success">
+            <strong>Success! </strong> User has been Disabled. 
+        </div>';
+        }
+
+        
 
         
     ?>
@@ -500,12 +514,29 @@
                                                 <!-- Modal Header -->
                                                 <div class="modal-header">
                                                     <h5>User Information</h5>
-                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                 </div>
                                                 <!-- Modal body -->
                                                 <div class="modal-body">
+
+                                                <?php if($row['Status'] == 'Disabled'){?>
+                                                    <div class="alert alert-danger row">
+                                                        <strong>Disabled!</strong>
+                                                    </div>
+                                                <?php }else{?>
+                                                    <div class="alert alert-success">
+                                                        <strong>Enabled!</strong> 
+                                                    </div>
+                                                <?php }?>
+
                                                 <?= form_open('updateUser/'.$row['userID']);?>
+
+                                                    
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+
                                                     <div class="form-group row">
+
+                                                    
                                                         <div class="col-md-4">
                                                             <label for="lname">Last Name:</label>
                                                             <input value="<?= $row['LastName'];?>" name="lname" type="text" class="form-control form-control-sm" placeholder="Last Name" id="lname">
@@ -916,6 +947,16 @@
                                                 <div class="modal-footer">
                                                     <button name="shiftstudent" class="btn btn-success" type="submit">Update</button>
                                                 <?= form_close(); ?>
+
+                                                <?php if($row['Status'] == 'Disabled' ){?>
+                                                    <?= form_open("enableuser/".$row['userID']); ?>
+                                                    <button name="enableuser" class="btn btn-primary" type="submit">Enable</button>
+                                                    <?= form_close(); ?>
+                                                <?php }else{?>
+                                                    <?= form_open("disableuser/".$row['userID']); ?>
+                                                    <button name="disableuser" class="btn btn-danger" type="submit">Disable</button>
+                                                    <?= form_close(); ?>
+                                                <?php }?>
                                                 </div>
 
                                             </div>

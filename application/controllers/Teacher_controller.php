@@ -28,7 +28,7 @@ class Teacher_controller extends CI_Controller{
 
 
 
-    public function collegeClassList($curriculumID,$subjectID){
+    public function collegeClassList($curriculumID,$subjectID,$subjectDesc,$course){
 
         if(empty($_SESSION['Authentication'])){
             redirect(base_url());
@@ -40,6 +40,13 @@ class Teacher_controller extends CI_Controller{
             }else{
                 $_SESSION['$curriculumID'] = $curriculumID;
                 $_SESSION['$subjectID'] = $subjectID;
+
+                $data['curriID'] = $curriculumID;
+                $data['subID'] = $subjectID;
+                $data['subjectDesc'] = $subjectDesc;
+                $data['course'] = $course;
+                $_SESSION['subjectDesc'] = $subjectDesc;
+                $_SESSION['course'] = $course;
 
                 $data['subject'] = $this->Teacher_model->collegeClassName($subjectID);
                 $data['SubjectName'] = $data['subject']['subjectDesc'];
@@ -174,6 +181,29 @@ class Teacher_controller extends CI_Controller{
 
     }
 
+    public function teacherexportclasslistcollege($curriculumID,$subjectID,$subjectDesc,$course){
+
+        if(empty($_SESSION['Authentication'])){
+            redirect(base_url());
+        }elseif($_SESSION['Authentication'] === 1){
+
+            $page = 'teachercollegeclasslist';
+            if(!file_exists(APPPATH.'views/reports/'.$page.'.php')){
+                show_404();
+            }else{
+
+                $data['subject'] = $subjectDesc;
+                $data['course'] = $course;
+                $data['collegeclasslist'] = $this->Deans_model->exportClassListCollege($curriculumID,$subjectID);
+                
+                $this->load->view('reports/'.$page, $data);
+    
+            }
+        }else{
+            redirect(base_url());
+        }
+
+    }
 
 
 

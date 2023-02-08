@@ -8,7 +8,7 @@
     ?>
 
 
-    <h1>College Resetting Page</h1>
+   
     <div class="container container-fluid">
     <br><br>
 

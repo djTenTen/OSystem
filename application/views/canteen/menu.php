@@ -20,7 +20,7 @@
     
     ?>
 
-    <h1>Menu Management</h1>    
+      
     <div class="container container-fluid" style="margin-top:1%;">
         <div class="row">
             <div class="col-lg-5">

@@ -19,7 +19,7 @@
         }
     
     ?>
-    <h1>Meeting Management</h1>
+    
     <div class="container" style="margin-top: 1%">
         <div class="row">
             <div class="col-lg-3">

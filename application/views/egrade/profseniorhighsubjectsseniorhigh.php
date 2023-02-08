@@ -20,7 +20,7 @@
         }
     
     ?>
-    <h1> Class List - Senior High</h1>
+    
     
     <h2 class="text-primary"><?= $SubjectName;?></h2>
 

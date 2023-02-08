@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h1>Senior High Students</h1>
+    
 
         <?= form_open('pod_seniorhigh');?>
             <div class="input-group mb-3">

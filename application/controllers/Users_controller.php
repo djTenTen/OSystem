@@ -118,6 +118,20 @@ class Users_controller extends CI_Controller{
         
 
     }
+    
+    public function enableUser($userID){
+        $this->Users_model->enableUser($userID);
+        $this->session->set_flashdata('Enabled','Enabled');
+        redirect('users');
+    }
+    
+
+
+    public function disableUser($userID){
+        $this->Users_model->disableUser($userID);
+        $this->session->set_flashdata('Disabled','Disabled');
+        redirect('users');
+    }
 
     
 

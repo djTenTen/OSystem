@@ -14,7 +14,7 @@
                 <thead class="sticky-top bg-white">
                 <tr>
                     <th>Curriculum ID</th>
-                    <th>Course Description</th>
+                    <th>Course Code</th>
                     <th>Year</th>
                     <th>Sem</th>
                     <th>Section</th>
@@ -25,7 +25,7 @@
                     <?php foreach($curriculumCollege as $row){?>  
                         <tr>
                             <td><?= $row['curriculumID'];?></td>
-                            <td><?= $row['CourseDesc'];?></td>
+                            <td><?= $row['CourseCode'];?></td>
                             <td><?= $row['Year'];?></td>
                             <td><?= $row['Sem'];?></td>
                             <td><?= $row['Section'];?></td>

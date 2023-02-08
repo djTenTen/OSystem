@@ -8,7 +8,7 @@
     ?>
 
 
-    <h1>Junior High Resetting Page</h1>
+    
 
 
 

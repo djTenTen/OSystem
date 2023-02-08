@@ -27,7 +27,7 @@
 
 
 
-<h1>Product Entry</h1> 
+
     <div class="container container-fluid" style="margin-top:1%;">
         <div class="row">
             <div class="col-lg-4">

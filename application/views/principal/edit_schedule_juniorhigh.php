@@ -20,7 +20,7 @@
         }
     ?>
 
-    <h1>Edit - Junior High Schedule</h1>
+    
     <a href="<?= base_url();?>schedule_juniorhigh" class="btn btn-primary btn-sm">Back</a>
     <div style="overflow-y:scroll;width:100%;height:550px">
         <table class="table table-bordered table-hover table-sm" style="margin-top: 1%;">

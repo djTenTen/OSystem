@@ -19,7 +19,7 @@
         }
     
     ?>
-<h1>Alumni Management</h1>
+
 
         <?= form_open('collegeStudentinfo');?>
             <div class="input-group mb-3">

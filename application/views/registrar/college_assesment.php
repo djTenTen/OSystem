@@ -20,7 +20,7 @@
         }
     
     ?>
-    <h1>College Assesment</h1>
+   
     <div class="container">
 
         <div class="row">
@@ -181,7 +181,7 @@
                                     Are you sure to Asses <strong><?= $fullname;?></strong>,
                                     this will be sent to Cashier for payment
                                 <?= form_open('assessstudentCollege/'.$admissionID);?>
-                                    <br>
+                                    <!-- <br>
                                     <br>
                                     <div class="form-group">
                                         <label>Mode of Payment:</label>
@@ -193,7 +193,7 @@
                                     <div class="form-group">
                                         <label>Down Payment:</label>
                                         <input name="downpayment" type="text" class="form-control form-control-sm" maxlength="6" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" required>
-                                    </div>
+                                    </div> -->
                                     
                                     
                                 </div>

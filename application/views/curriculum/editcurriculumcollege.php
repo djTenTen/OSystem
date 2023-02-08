@@ -13,7 +13,7 @@
 
         
     ?>
-<h1>Edit Curriculum College</h1>
+
 <h1><?= $course;?></h1>
 
     <div class="col-lg-6">

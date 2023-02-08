@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h1>Transaction Logs</h1>
+   
 
 
 

@@ -26,7 +26,7 @@
         }
     
     ?>
-    <h1>Curriculum Management - Senior High</h1>
+    
 
     <div class="container" style="margin-top:5%">
         <div class="row">

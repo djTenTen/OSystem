@@ -177,31 +177,14 @@ class Registrar_controller extends CI_Controller{
 
                 
 
-                $totalnstp = 0;
                 if($data['coursecode'] == 'BSCE' || $data['coursecode'] == 'BSCPE'){
-                    foreach($data['studentsSubject'] as $row){
-                        if($row['subjectCode'] == 'NSTP1' || $row['subjectCode'] == 'NSTP2'){
-                            $totalnstp = ($row['units'] * .50) * 684;
-                        }
-                    }
-                    $data['TFee'] = ($data['Tunits'] * 684) - $totalnstp;
+                    $data['TFee'] = $data['mainunits'] * 684;
                 }elseif($_SESSION['level'] == '4TH YEAR'){
-                    foreach($data['studentsSubject'] as $row2){
-                        if($row2['subjectCode'] == 'NSTP1' || $row2['subjectCode'] == 'NSTP2'){
-                            $totalnstp = ($row2['units'] * .50) * 629.57;
-                        }
-                    }
-                    $data['TFee'] = ($data['Tunits'] * 629.57)- $totalnstp;
+                    $data['TFee'] = $data['mainunits'] * 629.57;
                 }else{
-
-                    foreach($data['studentsSubject'] as $row1){
-                        if($row1['subjectCode'] == 'NSTP1' || $row1['subjectCode'] == 'NSTP2'){
-                            $totalnstp = ($row1['units'] * 705.88) * .50;
-                        }
-                    }
-                    $data['TFee'] = ($data['Tunits'] * 705.88)- $totalnstp;
-
+                    $data['TFee'] = $data['mainunits'] * 705.88;
                 }
+                
 
                 
                 

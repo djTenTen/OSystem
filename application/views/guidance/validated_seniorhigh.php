@@ -28,7 +28,7 @@
     
     ?>
 
-    <h1>Validated - Senior High</h1>
+   
 
     <div class="container">
         <div class="row">

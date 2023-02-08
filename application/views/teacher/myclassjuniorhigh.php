@@ -1,5 +1,5 @@
 <div class="container-fluid">
-<h1>Junior High Class</h1>
+
 <br>
 <br>
 

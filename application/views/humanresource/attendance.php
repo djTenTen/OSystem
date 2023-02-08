@@ -1,5 +1,5 @@
 <div class="container-fluid">
-<h1>Employee Attendance</h1>
+
     
     <?= form_open('empattendance');?>
     <div class="m-2 row">

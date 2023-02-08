@@ -20,7 +20,7 @@
         }
     
     ?>
-    <h1>Junior High Assesment</h1>
+    
     <div class="container">
 
         <div class="row">

@@ -17,8 +17,7 @@
         </div>';
         }
     ?>
-    <h1>Miscellaneous Management - Junior High</h1>
-
+   
     <div class="container container-fluid" style="margin-top: 1%;">
         <div class="row">
             <div class="col-lg-4">

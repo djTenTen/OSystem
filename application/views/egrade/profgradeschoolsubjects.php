@@ -1,6 +1,6 @@
 <div class="container-fluid">
 
-<h1>Grade School Subjects</h1>
+
 <h1><?= $Teacher;?></h1>
 <br>
 <br>

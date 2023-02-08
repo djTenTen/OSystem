@@ -182,6 +182,19 @@ class Users_model extends CI_Model{
 
     }
 
+    public function enableUser($userID){
+
+        $this->db->query("update users set Status = 'Enabled' where userID = '$userID'");
+
+    }
+
+
+    public function disableUser($userID){
+
+        $this->db->query("update users set Status = 'Disabled' where userID = '$userID'");
+        
+    }
+
     public function getcourse(){
         $query = $this->db->get('courses');
         return $query->result_array();

@@ -22,7 +22,7 @@
         }
     ?>
 
-<h1>Discount Management</h1>
+
 
 
     <div class="container" style="margin-top: 1%">

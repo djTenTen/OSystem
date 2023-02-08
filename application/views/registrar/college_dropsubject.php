@@ -23,7 +23,7 @@
 
     <div class="container container-fluid">
 
-        <h1>Students Information</h1>
+       
         <div class="row">
             <div class="form-group col-lg-4">
                 <label for="fullname">Full Name: </label>

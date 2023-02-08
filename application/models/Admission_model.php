@@ -12,7 +12,7 @@ class Admission_model extends CI_Model{
         $query = $this->db->query("select *,CourseDesc
         from students_college,courses
         where students_college.Course = courses.CourseID
-        and isEnrolled != 'Dismiss' order by isValidated asc, isTicked limit 500");
+        and isEnrolled != 'Dismiss' order by admissionID desc limit 500");
         return $query->result_array();
  
     }

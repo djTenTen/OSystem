@@ -335,7 +335,7 @@ class ProgChair_model extends CI_Model{
 
     //viewing of scedule
     public function getCurrilumCollege(){
-        $query = $this->db->query("select curriculumID,CourseDesc,Year,Sem,Section
+        $query = $this->db->query("select curriculumID,CourseDesc,CourseCode,Year,Sem,Section
         from curriculum_college,courses
         where curriculum_college.courseID = courses.CourseID
         and Sem = '2nd Sem'");

@@ -8,7 +8,7 @@
     ?>
 
 
-    <h1>Senior High Resetting Page</h1>
+   
 
 
 

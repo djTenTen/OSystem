@@ -20,7 +20,7 @@
     
     ?>
 <div class="container container-fluid">
-    <h1>College Students</h1>
+    
 
         <div class="input-group mb-3">
             <input name="searchEvaluated" id="myInput" type="text" class="form-control" placeholder="Search">

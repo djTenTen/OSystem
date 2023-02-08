@@ -50,6 +50,8 @@
         $(document).ready( function () {
             $('#datatable').DataTable();
         } );
+
+        
     </script>
 
 
@@ -99,7 +101,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="#">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -263,7 +265,7 @@
                                     </li>
 
                                     <li class="nav-item dropdown dropright">
-                                        <a class="dropdown-item whitetxt dropdown-toggle" type="button" aria-expanded="true" aria-controls="registrar" data-target="#evaluation" data-toggle="collapse">Status</a>
+                                        <a class="dropdown-item whitetxt dropdown-toggle" type="button" aria-expanded="true" aria-controls="registrar" data-target="#evaluation" data-toggle="collapse">Evaluated</a>
                                         <div class="collapse" id="evaluation">
                                             <ul class="navbar-nav pl-3">
                                                 <a class="dropdown-item whitetxt <?php if($_SESSION['Collegedpt'] == 'No'){echo "disabled";}?>" href="<?= base_url()?>collegeStudentinfo">College</a> 

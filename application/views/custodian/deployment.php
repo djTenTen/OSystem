@@ -35,7 +35,7 @@
         
     ?>
 
-<h1>Borrowed Item</h1>    
+   
     <div class="container container-fluid" style="margin-top:1%;">
         <div class="row">
             <div class="col-lg-3">

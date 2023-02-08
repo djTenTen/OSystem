@@ -1,5 +1,5 @@
 <div class="container-fluid">
-<h1>Senior High Class</h1>
+
 <br>
 <br>
 

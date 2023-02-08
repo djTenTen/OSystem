@@ -20,7 +20,7 @@
         }
     
     ?>
-    <h1> Class List</h1>
+  
     
     <h2 class="text-primary"><?= $SubjectName;?></h2>
 
@@ -30,6 +30,10 @@
         </div>
     <?php }?>
 
+    <?= form_open('teacherexportclasslistcollege/'.$curriID.'/'.$subID.'/'.$subjectDesc.'/'.$course);?>
+            <button type="submit" class="btn btn-primary" data-toggle="tooltip" title="Export">Export</button>
+        <?= form_close();?>
+        
         <div class="input-group mb-3">
             <input name="searchEvaluated" id="myInput" type="text" class="form-control" placeholder="Name / Student Number">
             <div class="input-group-append">

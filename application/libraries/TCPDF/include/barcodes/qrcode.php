@@ -1257,7 +1257,7 @@ class QRcode {
 	 * Return true if the character at specified position is a number
 	 * @param $str (string) string
 	 * @param $pos (int) characted position
-	 * @return boolean true of false
+	 * @return bool true of false
 	 */
 	 protected function isdigitat($str, $pos) {
 		if ($pos >= strlen($str)) {
@@ -1270,7 +1270,7 @@ class QRcode {
 	 * Return true if the character at specified position is an alphanumeric character
 	 * @param $str (string) string
 	 * @param $pos (int) characted position
-	 * @return boolean true of false
+	 * @return bool true of false
 	 */
 	 protected function isalnumat($str, $pos) {
 		if ($pos >= strlen($str)) {
@@ -1386,7 +1386,7 @@ class QRcode {
 			$p += 2;
 		}
 		$this->items = $this->appendNewInputItem($this->items, QR_MODE_KJ, $p, str_split($this->dataStr));
-		return $run;
+		return 0;
 	}
 
 	/**
@@ -1443,6 +1443,7 @@ class QRcode {
 	 * @return (int)
 	 */
 	 protected function splitString() {
+		$hint = 0;
 		while (strlen($this->dataStr) > 0) {
 			$mode = $this->identifyMode(0);
 			switch ($mode) {
@@ -1701,26 +1702,26 @@ class QRcode {
 		return $items;
 	}
 
-	/**
-	 * insertStructuredAppendHeader
-	 * @param $items (array)
-	 * @param $size (int)
-	 * @param $index (int)
-	 * @param $parity (int)
-	 * @return array items
-	 */
-	 protected function insertStructuredAppendHeader($items, $size, $index, $parity) {
-		if ($size > MAX_STRUCTURED_SYMBOLS) {
-			return -1;
-		}
-		if (($index <= 0) OR ($index > MAX_STRUCTURED_SYMBOLS)) {
-			return -1;
-		}
-		$buf = array($size, $index, $parity);
-		$entry = $this->newInputItem(QR_MODE_ST, 3, buf);
-		array_unshift($items, $entry);
-		return $items;
-	}
+	// /**
+	//  * insertStructuredAppendHeader
+	//  * @param $items (array)
+	//  * @param $size (int)
+	//  * @param $index (int)
+	//  * @param $parity (int)
+	//  * @return array items
+	//  */
+	//  protected function insertStructuredAppendHeader($items, $size, $index, $parity) {
+	// 	if ($size > MAX_STRUCTURED_SYMBOLS) {
+	// 		return -1;
+	// 	}
+	// 	if (($index <= 0) OR ($index > MAX_STRUCTURED_SYMBOLS)) {
+	// 		return -1;
+	// 	}
+	// 	$buf = array($size, $index, $parity);
+	// 	$entry = $this->newInputItem(QR_MODE_ST, 3, buf);
+	// 	array_unshift($items, $entry);
+	// 	return $items;
+	// }
 
 	/**
 	 * calcParity
@@ -1743,7 +1744,7 @@ class QRcode {
 	 * checkModeNum
 	 * @param $size (int)
 	 * @param $data (array)
-	 * @return boolean true or false
+	 * @return bool true of false
 	 */
 	 protected function checkModeNum($size, $data) {
 		for ($i=0; $i<$size; ++$i) {
@@ -1767,7 +1768,7 @@ class QRcode {
 	 * checkModeAn
 	 * @param $size (int)
 	 * @param $data (array)
-	 * @return boolean true or false
+	 * @return bool true of false
 	 */
 	 protected function checkModeAn($size, $data) {
 		for ($i=0; $i<$size; ++$i) {
@@ -1834,7 +1835,7 @@ class QRcode {
 	 * checkModeKanji
 	 * @param $size (int)
 	 * @param $data (array)
-	 * @return boolean true or false
+	 * @return bool true of false
 	 */
 	 protected function checkModeKanji($size, $data) {
 		if ($size & 1) {
@@ -1854,7 +1855,7 @@ class QRcode {
 	 * @param $mode (int) encoding mode.
 	 * @param $size (int) size of data (byte).
 	 * @param $data (array) data to validate
-	 * @return boolean true in case of valid data, false otherwise
+	 * @return bool true in case of valid data, false otherwise
 	 */
 	protected function check($mode, $size, $data) {
 		if ($size <= 0) {

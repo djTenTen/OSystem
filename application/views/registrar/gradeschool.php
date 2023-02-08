@@ -21,7 +21,7 @@
         }
     
     ?>
-    <h1>Grade School Students</h1>
+   
     <div class="container container-fluid"style="margin-top: 2%">
     
         <?= form_open("gradeschool");?>

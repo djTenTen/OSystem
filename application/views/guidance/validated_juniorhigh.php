@@ -27,7 +27,7 @@
         }
     
     ?>
-    <h1>Validated - Junior High</h1>
+    
 
     <div class="container">
         <div class="row">            

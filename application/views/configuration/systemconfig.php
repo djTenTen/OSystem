@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h1>Configuration Page</h1>
+   
 
     <br><br>
 

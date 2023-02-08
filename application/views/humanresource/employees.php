@@ -23,7 +23,7 @@
         <div class="row">
             <div class="col-lg-5">
             <?= form_open('addemployee');?>
-                <h1>Employee Management</h1>
+               
                 <div class="form-group row">
                     <div class="col-md-4">
                         <label for="lname">Last Name:</label>

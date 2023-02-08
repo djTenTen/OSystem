@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h1>Subjects & Schedule</h1><br>
+   
     
 
     <table class="table table-borderless table-sm">

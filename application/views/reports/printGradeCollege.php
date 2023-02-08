@@ -50,12 +50,12 @@ $pdf->AddPage();
         // $img_file = K_PATH_IMAGES.'logohcc.png';
         // $pdf->Image($img_file, 30, 70, 150, 150, '', '', '', false, 300, '', false, false, 0);
 
-        //<td><h3 style="color: red;"><strong>GWA: '.round($totalgxsu / $Totatunits,2).' </strong></h3></td>
+
         // computing grade x subject unit
         $gxsu = $this->db->query("select sum(Grade * units) as gxsu
         from student_subject_college,subject_college
         where student_subject_college.sy = '$sy'
-        and student_subject_college.semester = '1ST SEM'
+        and student_subject_college.semester = '$sem'
         and admissionNO = '$admissionID'
         and subject_college.subjectID = student_subject_college.subjectID");
         foreach($gxsu->result_array() as $value){
@@ -65,7 +65,7 @@ $pdf->AddPage();
         $computunits = $this->db->query("select Grade,sum(units) as compunits
         from student_subject_college,subject_college
         where student_subject_college.sy = '$sy'
-        and student_subject_college.semester = '1ST SEM'
+        and student_subject_college.semester = '$sem'
         and admissionNO = '$admissionID'
         and subject_college.subjectID = student_subject_college.subjectID");
         foreach($computunits->result_array() as $value){
@@ -116,7 +116,7 @@ $pdf->AddPage();
                 </tr>
                 <tr>
                     <td><strong>Address: </strong>'.$Address.'</td>
-                   
+                    <td><h3 style="color: red;"><strong>GWA: '.round($totalgxsu / $Totatunits,2).' </strong></h3></td>
                 </tr>
         </table><br><br>
 

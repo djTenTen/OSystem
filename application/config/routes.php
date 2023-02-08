@@ -9,6 +9,8 @@ $route['updateUser/(:any)'] = 'Users_controller/updateUser/$1';
 $route['deleteUser/(:any)'] = 'Users_controller/deleteUser/$1';
 $route['accountsetting/(:any)'] = 'Users_controller/getuserInfo/$1';
 $route['accountsettingsupdate/(:any)'] = 'Users_controller/accountsettingsupdate/$1';
+$route['enableuser/(:any)'] = 'Users_controller/enableUser/$1';
+$route['disableuser/(:any)'] = 'Users_controller/disableUser/$1';
 $route['selectdpt'] = 'Users_controller/selectdpt';
 $route['signupcollege'] = 'Users_controller/signupcollege';
 $route['signupshs'] = 'Users_controller/signupshs';
@@ -408,8 +410,9 @@ $route['markEnrolledGradeschool/(:any)'] = 'Cashier_controller/enrollGradeschool
 
 //TEACHER 
 $route['myclasscollege'] = 'Teacher_controller/mySubjectCollege';
-$route['collegeclasslist/(:any)/(:any)'] = 'Teacher_controller/collegeClassList/$1/$2';
+$route['collegeclasslist/(:any)/(:any)/(:any)/(:any)'] = 'Teacher_controller/collegeClassList/$1/$2/$3/$4';
 $route['updateGradeCollege/(:any)'] = 'Teacher_controller/updateGradeCollege/$1';
+$route['teacherexportclasslistcollege/(:any)/(:any)/(:any)/(:any)'] = 'Teacher_controller/teacherexportclasslistcollege/$1/$2/$3/$4';
 
 $route['myclassseniorhigh'] = 'Teacher_controller/mySubjectSeniorhigh';
 $route['seniorhighclasslist/(:any)/(:any)'] = 'Teacher_controller/seniorhighClassList/$1/$2';

@@ -10,7 +10,7 @@
 </script>
 
 <div class="container-fluid">
-    <h1>List of Enrolled College Students</h1>
+    
     <div class="container container-fluid">
     <br><br>
 

@@ -19,7 +19,7 @@
         }
     ?>
 
-<h1>Multimedia Request ID Management</h1>
+
 
         <?= form_open('request');?>
             <div class="input-group mb-3">

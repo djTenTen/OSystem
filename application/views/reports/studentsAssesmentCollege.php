@@ -304,7 +304,7 @@ $pdf->AddPage();
         
         // output the HTML content
         $pdf->writeHTML($html, true, false, false, false, '');
-        $pdf->Output($FullName.'.pdf','I');
+        $pdf->Output($FullName.'.pdf','D');
       
         
 

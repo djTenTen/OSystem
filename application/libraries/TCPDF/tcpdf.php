@@ -2377,7 +2377,7 @@ class TCPDF {
 
 	/**
 	 * Return the RTL status
-	 * @return boolean
+	 * @return bool
 	 * @public
 	 * @since 4.0.012 (2008-07-24)
 	 */
@@ -2419,7 +2419,7 @@ class TCPDF {
 
 	/**
 	 * Return the current temporary RTL status
-	 * @return boolean
+	 * @return bool
 	 * @public
 	 * @since 4.8.014 (2009-11-04)
 	 */
@@ -2815,7 +2815,7 @@ class TCPDF {
 
 	/**
 	 * Return the auto-page-break mode (true or false).
-	 * @return boolean auto-page-break mode
+	 * @return bool auto-page-break mode
 	 * @public
 	 * @since 5.9.088
 	 */
@@ -4134,8 +4134,8 @@ class TCPDF {
 			// SHY character will not be printed
 			return (0);
 		}
-		if (isset($this->CurrentFont['cw'][$char])) {
-			$w = $this->CurrentFont['cw'][$char];
+		if (isset($this->CurrentFont['cw'][(int)$char])) {
+			$w = $this->CurrentFont['cw'][(int)$char];
 		} elseif (isset($this->CurrentFont['dw'])) {
 			// default width
 			$w = $this->CurrentFont['dw'];
@@ -4937,7 +4937,7 @@ class TCPDF {
 	 * Whenever a page break condition is met, the method is called, and the break is issued or not depending on the returned value.
 	 * The default implementation returns a value according to the mode selected by SetAutoPageBreak().<br />
 	 * This method is called automatically and should not be called directly by the application.
-	 * @return boolean
+	 * @return bool
 	 * @public
 	 * @since 1.4
 	 * @see SetAutoPageBreak()
@@ -4962,10 +4962,10 @@ class TCPDF {
 
 	/**
 	 * Add page if needed.
-	 * @param $h (float) Cell height. Default value: 0.
-	 * @param $y (mixed) starting y position, leave empty for current position.
+	 * @param float|int $h (float) Cell height. Default value: 0.
+	 * @param int|string $y (mixed) starting y position, leave empty for current position.
 	 * @param $addpage (boolean) if true add a page, otherwise only return the true/false state
-	 * @return boolean true in case of page break, false otherwise.
+	 * @return bool true in case of page break, false otherwise.
 	 * @since 3.2.000 (2008-07-01)
 	 * @protected
 	 */
@@ -6671,13 +6671,11 @@ class TCPDF {
 			switch ($align) {
 				case 'J':
 				case 'C': {
-					$w = $w;
+
 					break;
 				}
 				case 'L': {
-					if ($this->rtl) {
-						$w = $w;
-					} else {
+					if (!$this->rtl) {
 						$w = $l;
 					}
 					break;
@@ -6685,8 +6683,6 @@ class TCPDF {
 				case 'R': {
 					if ($this->rtl) {
 						$w = $l;
-					} else {
-						$w = $w;
 					}
 					break;
 				}
@@ -8160,7 +8156,7 @@ class TCPDF {
 						$annots .= ' /FT /Btn';
 						$annots .= ' /Kids [';
 						$defval = '';
-						foreach ($this->radiobutton_groups[$n][$pl['txt']] as $key => $data) {
+						foreach ($this->radiobutton_groups[$n][$pl['txt']] as $keyInner => $data) {
 							if (isset($data['kid'])) {
 								$annots .= ' '.$data['kid'].' 0 R';
 								if ($data['def'] !== 'Off') {
@@ -14632,7 +14628,7 @@ class TCPDF {
 	 * @since 3.1.000 (2008-06-09)
 	 * @protected
 	 */
-	function _putshaders() {
+	public function _putshaders() {
 		if ($this->pdfa_mode) {
 			return;
 		}
@@ -19554,6 +19550,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 				// closing tag used for the thead part
 				$in_table_head = true;
 				$this->inthead = false;
+				break;
 			case 'table': {
 				$table_el = $parent;
 				// set default border
@@ -22192,7 +22189,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 
 	/**
 	 * Return the default option for font subsetting.
-	 * @return boolean default font subsetting state.
+	 * @return bool default font subsetting state.
 	 * @author Nicola Asuni
 	 * @public
 	 * @since 5.3.002 (2010-06-07)

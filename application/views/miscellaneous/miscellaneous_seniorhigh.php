@@ -18,7 +18,7 @@
         </div>';
         }
     ?>
-    <h1>Miscellaneous Management - Senior High</h1>
+    
 
     <div class="container container-fluid" style="margin-top: 1%;">
         <div class="row">
