@@ -265,6 +265,18 @@
                                     </li>
 
                                     <li class="nav-item dropdown dropright">
+                                        <a class="dropdown-item whitetxt dropdown-toggle" type="button" id="navbardrop" data-target="#enrolledcollege" data-toggle="collapse">Enrolled</a>
+                                        <div class="collapse" id="enrolledcollege">
+                                            <ul class="navbar-nav pl-3">
+                                                <a class="dropdown-item whitetxt <?php if($_SESSION['Collegedpt'] == 'No'){echo "disabled";}?>" href="<?= base_url()?>collegeEnrolled">College</a> 
+                                                <a class="dropdown-item whitetxt <?php if($_SESSION['SeniorHighdpt'] == 'No'){echo "disabled";}?>" href="<?= base_url();?>seniorhighEnrolled">Senior High</a>
+                                                <a class="dropdown-item whitetxt <?php if($_SESSION['JuniorHighdpt'] == 'No'){echo "disabled";}?>" href="<?= base_url();?>juniorhighEnrolled">Junior High</a>
+                                                <a class="dropdown-item whitetxt <?php if($_SESSION['GradeSchooldpt'] == 'No'){echo "disabled";}?>" href="<?= base_url();?>gradeschoolEnrolled">Grade School</a>                   
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav-item dropdown dropright">
                                         <a class="dropdown-item whitetxt dropdown-toggle" type="button" aria-expanded="true" aria-controls="registrar" data-target="#evaluation" data-toggle="collapse">Evaluated</a>
                                         <div class="collapse" id="evaluation">
                                             <ul class="navbar-nav pl-3">
