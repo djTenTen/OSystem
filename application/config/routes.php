@@ -570,6 +570,9 @@ $route['deletediscount/(:any)'] = 'Discount_Controller/deleteDiscount/$1';
 $route['mistransactionlogs'] = 'MIS_controller/transactionLogs';
 $route['mistransactionforms'] = 'MIS_controller/transactionForms';
 $route['insertrequest'] = 'MIS_controller/insertRequest';
+$route['sevicerequestform'] = 'MIS_controller/seviceRequestForm';
+$route['sevicerequestlist'] = 'MIS_controller/seviceRequestList';
+
 
 //COLLEGE RESET
 $route['collegereset'] = 'MIS_controller/collegestudents';

@@ -228,6 +228,41 @@ class MIS_controller extends CI_Controller{
 
 
 
+
+
+
+    public function seviceRequestForm(){
+
+        $data['title'] = "Sevice Request Form";
+
+        $page = "service";
+        $this->load->view('mis/'.$page, $data);
+
+    }
+
+
+    public function seviceRequestList(){
+
+        $data['title'] = "Sevice Request List";
+
+        $page = "service_request";
+        $this->load->view('mis/'.$page, $data);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 
 }
