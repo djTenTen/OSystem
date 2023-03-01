@@ -246,9 +246,27 @@ class MIS_controller extends CI_Controller{
         $data['title'] = "Sevice Request List";
 
         $page = "service_request";
+
+        $data['request'] = $this->MIS_model->getServiceRequest();
         $this->load->view('mis/'.$page, $data);
 
     }
+
+
+
+    public function sendRequestForm(){
+
+        $this->MIS_model->sendRequestForm();
+        $this->session->set_flashdata('requestsent','requestsent');
+        redirect('sevicerequestform');
+
+    }
+
+
+
+
+
+    
 
 
 

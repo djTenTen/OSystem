@@ -82,7 +82,7 @@
 
 <div id="wrapper">
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-<?php if($secured == 'No'){ echo 'danger';}else{echo 'primary';}?> sidebar sidebar-dark accordion" id="accordionSidebar">
 
         
 
@@ -635,6 +635,13 @@
                 <div class="row align-items-center">
                     <div class="container">
                         <h1><?= $title;?></h1>
+
+
+                        <?php if($secured  == 'No'){ $userID = $_SESSION['userid'];?>
+                            <?= form_open(base_url()."accountsetting/$userID");?>
+                                <button type="submit" class="btn btn-danger"><strong>You are using Unsecured Account, Click here change your password</strong></button>
+                            <?= form_close();?>
+                        <?php }?>
                     </div>
                 </div>
                 
@@ -654,7 +661,7 @@
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                             aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="<?= base_url();?>accountsetting/<?= $_SESSION['userid']?>">
                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Profile
                             </a>

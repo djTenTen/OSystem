@@ -47,7 +47,7 @@
                 </tr>
             </thead>
             <tbody>
-            <?php if($release == 'Yes'){?>
+            <?php if($release == 'Yes' and $_SESSION['Status'] == 'Enabled'){?>
                 <?php foreach($studentSubjects as $subjects){?>
                     <tr class="<?php if($subjects['Remarks'] == 'PASSED'){echo 'alert alert-success';}
                         elseif($subjects['Remarks'] == 'INC'){echo 'alert alert-danger';}
@@ -69,7 +69,7 @@
                 <?php }?>
             <?php } else {?>
                 <div class="alert alert-danger">
-                    <h1><strong>Note: </strong>Grade releasing closed</h1>
+                    <h1><strong>Note: </strong>Grade releasing closed or Disabled</h1>
                 </div>
             <?php }?>
             </tbody>

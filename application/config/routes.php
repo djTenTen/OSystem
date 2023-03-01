@@ -571,6 +571,7 @@ $route['mistransactionlogs'] = 'MIS_controller/transactionLogs';
 $route['mistransactionforms'] = 'MIS_controller/transactionForms';
 $route['insertrequest'] = 'MIS_controller/insertRequest';
 $route['sevicerequestform'] = 'MIS_controller/seviceRequestForm';
+$route['sendrequestform'] = 'MIS_controller/sendRequestForm';
 $route['sevicerequestlist'] = 'MIS_controller/seviceRequestList';
 
 

@@ -75,6 +75,7 @@ class Login_controller extends CI_Controller{
             //ADMIN
             
             $data['Administrator'] = $data['login']['Administrator'];
+            $data['Status'] = $data['login']['Status'];
 
             if (count($result) > 0){
 
@@ -120,7 +121,8 @@ class Login_controller extends CI_Controller{
                 'President' =>$data['President'],
                 'Multimedia' => $data['Multimedia'],
                 'MIS' => $data['MIS'],
-                'Administrator' => $data['Administrator']
+                'Administrator' => $data['Administrator'],
+                'Status' => $data['Status']
             );
 
                 $this->session->set_userdata($sess_data);
@@ -203,6 +205,7 @@ class Login_controller extends CI_Controller{
             //ADMIN
             
             $data['Administrator'] = $data['login']['Administrator'];
+            $data['Status'] = $data['login']['Status'];
 
             if (count($result) > 0){
 
@@ -248,7 +251,8 @@ class Login_controller extends CI_Controller{
                 'President' =>$data['President'],
                 'Multimedia' => $data['Multimedia'],
                 'MIS' => $data['MIS'],
-                'Administrator' => $data['Administrator']
+                'Administrator' => $data['Administrator'],
+                'Status' => $data['Status']
             );
 
                 $this->session->set_userdata($sess_data);

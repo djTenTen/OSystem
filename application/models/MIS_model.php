@@ -221,6 +221,45 @@ class MIS_model extends CI_Model{
 
     }
 
+
+
+
+
+
+
+
+
+
+    public function sendRequestForm(){
+
+        date_default_timezone_set("Asia/Singapore");
+        $datenow = date("m/d/Y");
+        $timenow = date("H:i:s");
+
+        $data = array(
+            'Service' => $this->input->post('service'),
+            'Location' => $this->input->post('location'),
+            'Department' => $this->input->post('dpt'),
+            'ProblemDesc' => $this->input->post('problem'),
+            'Requestby' => $this->input->post('rname'),
+            'Date' => $datenow,
+            'Time' => $timenow,
+            'Status' => 'Pending'
+        );
+
+        $this->db->insert("mistransactions", $data);
+        
+
+    }
+
+
+    public function getServiceRequest(){
+
+        $query = $this->db->query("select * from mistransactions order by TransactionID desc");
+        return $query->result_array();
+
+    }
+
     
 
 }

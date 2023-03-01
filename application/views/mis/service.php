@@ -57,22 +57,31 @@
 <body class="bg-primary">
 
 
-    <div class="container bg-white mt-5 mb-5 p-5">
+    <div class="container bg-white mt-3 mb-3 p-5">
+
+
+        <?php
+            if($this->session->flashdata('requestsent') != null){
+                echo '<div class="alert alert-success">
+                <strong>Success! </strong> Request has been sent to the MIS office. 
+            </div>';
+            }
+        ?>
+
+
         <div class="row align-items-center justify-content-center">
             <img src="<?= base_url();?>img/logo4.png" alt="Logo" style="width: 10%">
             <h1>Holy Cross College Service Request Form</h1>
         </div>
 
         
-        <form action="" method="post">
+        <form action="sendrequestform" method="post">
 
             <div class="row m-5">
 
-                
-
                 <div class="col-4">
                     <label for="sel1" class="form-label">Service Request</label>
-                    <select class="form form-control form-select" id="sel1" name="sellist1" required>
+                    <select class="form form-control form-select" id="sel1" name="service" required>
                         <option value="" selected>Select Service</option>
                         <option value="Hardware Support, Troubleshooting and Repair">Hardware Support, Troubleshooting and Repair</option>
                         <option value="Network and Internet Technical Support">Network and Internet Technical Support</option>
@@ -82,13 +91,13 @@
 
                 <div class="col-4">
                     <label for="sel1" class="form-label">Location/Office of the service request</label>
-                    <input type="text" class="form form-control form-input" placeholder="Location/Office" required>
+                    <input name="location" type="text" class="form form-control form-input" placeholder="Location/Office" required>
                 </div>
 
 
                 <div class="col-4">
                     <label for="sel1" class="form-label">Department</label>
-                    <select class="form form-control form-select" id="sel1" name="sellist1" required>
+                    <select class="form form-control form-select" id="sel1" name="dpt" required>
                         <option value="" selected>Select Department</option>
                         <option value="College">College</option>
                         <option value="Seniorhigh">Seniorhigh</option>
@@ -107,19 +116,18 @@
             </div>
 
 
-
             <div class="row m-5">
 
                 <div class="col-4">
                     <label for="sel1" class="form-label">Problem / Request Description</label>
-                    <textarea class="form-control" rows="5" id="comment" name="text" required></textarea>
+                    <textarea class="form-control" rows="5" id="comment" name="problem" required></textarea>
                     
                 </div>
 
 
                 <div class="col-4">
                     <label for="sel1" class="form-label">Requested by:</label>
-                    <input type="text" class="form form-control form-input" placeholder="Name" required>
+                    <input name="rname" type="text" class="form form-control form-input" placeholder="Name" required>
                 </div>
                 
             </div>
@@ -127,7 +135,7 @@
 
             <div class="row m-5">
 
-                <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                <button type="submit" class="btn btn-primary btn-lg">Send Request</button>
 
             </div>
 
@@ -136,57 +144,5 @@
     </div>
 
 
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-    <div class="testbox">
-      <form action="/">
-        <div class="banner" readonly>
-          <h1>Service Request Form</h1>
-        </div><br>
-        <h2 readonly>Select Service/s Request</h2>
-        <div class="item">   
-          <div class="city-item">  
-          <select>
-              <option value="">Select Service/s</option>
-              <option value="1">Hardware Support, Troubleshooting and Repair.</option>
-              <option value="2">Network and Internet Technical Support</option>
-              <option value="3">Infromation System Technical Support.</option>
-            </select>
-            <input type="text" name="name" placeholder="Location of Unit/s if the Service Request" />
-          </div>
-        </div>
-        <div class="item">
-        <h2>Problem / Request Description</h2>
-          <input type="text" name="name" placeholder="Desrciption"/>
-        </div>
-        <div class="city-item">
-        <input type="date"  name="date">
-          <input type="time" id="appt" name="appt">      
-        </div>
-        <div class="item">
-          <p>Request by:</p>
-          <input type="text" name="name"/>
-        </div>
-        <div class="item">
-          <p>Office / Department</p>
-          <input type="text" name="name"/>
-        </div>
-        <center>
-        <div class="question">
-          <p>Please Note: The MIS Office provides IT support only for hardware, sorftware, and information systems owned by HCC.</p>
-          
-        </div>
-    </center>
-        <div class="btn-block">
-          <button type="submit" href="/">Submit</button>
-        </div>
-      </form>
-    </div>   
 </body>
 </html>
